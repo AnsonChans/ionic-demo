@@ -7,5 +7,10 @@
 </ion-header>
 
 <ion-content>
- <h1>测试</h1>
+ <ul>
+   <li *ngFor="let item of Msg" >
+     <h1>{{item.idx}} {{item.name}}</h1>
+   </li>
+ </ul>
+ <p *ngIf="Msg.length>2" >There are many goals!</p>
 </ion-content>
