@@ -12,5 +12,6 @@
      <h1>{{item.idx}} {{item.name}}</h1>
    </li>
  </ul>
+ <div class="bad" [class.special]="!isSpecial">1</div>
  <p *ngIf="Msg.length>2" >There are many goals!</p>
 </ion-content>
