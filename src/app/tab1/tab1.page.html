@@ -7,11 +7,65 @@
 </ion-header>
 
 <ion-content>
- <ul>
-   <li *ngFor="let item of Msg" >
-     <h1>{{item.idx}} {{item.name}}</h1>
-   </li>
- </ul>
- <div class="bad" [class.special]="!isSpecial">1</div>
+
+ <!-- css类绑定 -->
+ <div class="bad" [class.special]="!a">1</div>
+ <!-- 样式绑定 -->
+ <div [style.font-size]="!a?'x-large':'smaller'" >This idv is x-large or smaller</div>
+ <!-- 
+   内置属性型指令:
+   ngClass
+   ngStyle
+   ngModel
+  -->
+<div [ngClass]="{'bad': false,'special':true}">ABC</div>
+<div [ngStyle]="currentStyles">EFG</div>
+<input [(ngModel)]="currentHero.name"/>
+<span>{{currentHero.name}}</span>
+
+<!-- 
+   内置结构型指令:
+   *ngIf
+   *ngFor
+   *ngSwitch
+  -->
+
  <p *ngIf="Msg.length>2" >There are many goals!</p>
+
+ <ul>
+  <li *ngFor="let item of Msg" >
+    <h1>{{item.idx}} {{item.name}}</h1>
+  </li>
+</ul>
+
+<div [ngSwitch]="currentHero.emotion">
+<p *ngSwitchCase="happy">
+  123
+</p>
+<p *ngSwitchCase="false">
+  456
+</p>
+<p *ngSwitchDefault>
+  789
+</p>
+
+<!-- 模版表达式操作符
+      管道操作符|
+      安全导航操作符？.（空属性路径）
+      非空断言操作符（！）
+-->
+</div>
+
+
+<button (click)="onClickMe()">
+  Click Me!
+</button>
+{{clickMsg}}
+
+<input type="text" (keyup)="onKey($event)">
+<p>{{values}}</p>
+
+<input #box (keyup)='0'>
+<p>{{box.value}}</p>
+
 </ion-content>
