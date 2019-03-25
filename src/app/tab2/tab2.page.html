@@ -1,9 +1,26 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Tab Two
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <!-- 组件交互 -->
+  123
+  <!-- <app-hero-child *ngFor="let hero of Hero" [hero]="hero">
+    </app-hero-child> -->
+    <!-- @Input/setter.getter -->
+    <app-hero-child *ngFor="let hero of Hero" [hero]="hero" [master]="master">
+      </app-hero-child>
+
+  <!-- ngOnChanges -->
+  <button (click)="newMinor()" >小版本更新</button>
+  <button (click)="newMajor()" >大版本更新</button>
+  <app-version-child [minor]="minor" [major]='major'></app-version-child>
+
+  <!-- EventEmitter属性 子组件利用属性emit事件 -->
+  <h3>Agree:{{agreed}},Disagree:{{disagreed}}</h3>
+  <app-voter *ngFor="let voter of voters" [name]='voter' (voted)='onVoted($event)'></app-voter>
+</ion-content>
