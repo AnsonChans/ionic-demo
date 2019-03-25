@@ -23,4 +23,18 @@
   <!-- EventEmitter属性 子组件利用属性emit事件 -->
   <h3>Agree:{{agreed}},Disagree:{{disagreed}}</h3>
   <app-voter *ngFor="let voter of voters" [name]='voter' (voted)='onVoted($event)'></app-voter>
+
+  <!-- 本地变量#<const> -->
+  <h3>本地变量#const倒计时</h3>
+  <button (click)="timer.start()">Start</button>
+  <button (click)="timer.stop()">Stop</button>
+  <div class="seconds">{{timer.seconds}}</div>
+  <app-countdown-timer #timer></app-countdown-timer>
+
+  <!-- 父组件调用@ViewChild -->
+  <h3>父组件调用@ViewChild倒计时</h3>
+  <button (click)="start()">Start</button>
+  <button (click)="stop()">Stop</button>
+  <div class="seconds">{{seconds()}}</div>
+  <app-countdown-timer ></app-countdown-timer>
 </ion-content>

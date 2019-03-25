@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import {VersionChildComponent} from './tab2.version'
 import {VoterComponent} from './tab2.voter'
+import { CountdownTimerComponent }  from './countdown-timer';
 @NgModule({
   imports: [
     IonicModule,
@@ -15,6 +16,6 @@ import {VoterComponent} from './tab2.voter'
     RouterModule.forChild([{ path: '', component: Tab2Page }])
   
   ],
-  declarations: [Tab2Page,HeroChildComponent,VersionChildComponent,VoterComponent]
+  declarations: [Tab2Page,HeroChildComponent,VersionChildComponent,VoterComponent,CountdownTimerComponent]
 })
 export class Tab2PageModule {}
