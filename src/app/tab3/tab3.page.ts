@@ -8,12 +8,12 @@ import { AdService } from './ad.service';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page implements OnInit {
-  
+  color :string;
   ads:AdItem[];
   constructor(private adService:AdService){}
 
   ngOnInit(){
     this.ads = this.adService.getAds();
   }
-
+ 
 }

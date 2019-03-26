@@ -13,5 +13,18 @@
 </div>
 
 <h1>属性型指令</h1>
-<p appHighlight>Hightlight Me!</p>
+<p appHighlight="yellow">Hightlight Me!yellow</p>
+<p appHighlight="orange">Hightlight Me!orange</p>
+
+
+
+<h4>选择颜色</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+<!-- 可传多个属性 -->
+<p [appHighlight]='color' defaultColor="violet">Highlight me!</p>
+<p [appHighlight]='color'>Highlighted noDefaultColor</p>
 </ion-content>

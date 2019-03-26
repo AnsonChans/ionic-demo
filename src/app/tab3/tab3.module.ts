@@ -23,4 +23,6 @@ import { AdService } from './ad.service';
   declarations: [Tab3Page,AdDirective,AdBannerComponent,HeroJobAdComponent, HeroProfileComponent,HighlightDirective],
   bootstrap: [ Tab3Page ]
 })
-export class Tab3PageModule {}
+export class Tab3PageModule {
+  
+}
