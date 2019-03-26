@@ -12,7 +12,7 @@ import { OnInit, OnDestroy, Input, Component, ViewChild, ComponentFactoryResolve
             </div>
             `
 })
-
+// <ng-template>元素就是刚才制作的指令将应用到的地方，要应用AdDirective，<ng-template>不会渲染任何额外的输出
 export class AdBannerComponent implements OnInit, OnDestroy {
     @Input() ads: AdItem[];
     currentAdIndex = -1;
@@ -33,7 +33,7 @@ export class AdBannerComponent implements OnInit, OnDestroy {
     loadComponent() {
         this.currentAdIndex = (this.currentAdIndex + 1) % this.ads.length;
         let adItem = this.ads[this.currentAdIndex];
-
+        
         let componentFactory = this.componentFactoryResolver.resolveComponentFactory(adItem.component)
 
         let viewContainerRef = this.adHost.viewContainerRef
