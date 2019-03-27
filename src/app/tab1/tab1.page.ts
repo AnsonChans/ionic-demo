@@ -27,8 +27,11 @@ export class Tab1Page {
       name:'AnsonChans',
       emmotion:'happy'
     }
+    birthday = new Date(1994,11,3);
     clickMsg = ''
     values=''
+    power = 5;
+    factor =1;
     onClickMe(){
       this.clickMsg='You are Click'
     }

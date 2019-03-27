@@ -1,3 +1,4 @@
+import { UnlessDiretive } from './unless.directive';
 import { HighlightDirective } from './highlight.directive';
 import { HeroProfileComponent } from './hero-profile.component';
 import { HeroJobAdComponent } from './hero-job-ad.component';
@@ -20,7 +21,7 @@ import { AdService } from './ad.service';
     RouterModule.forChild([{ path: '', component: Tab3Page }])
   ],
   entryComponents: [ HeroJobAdComponent, HeroProfileComponent ],
-  declarations: [Tab3Page,AdDirective,AdBannerComponent,HeroJobAdComponent, HeroProfileComponent,HighlightDirective],
+  declarations: [Tab3Page,AdDirective,AdBannerComponent,HeroJobAdComponent, HeroProfileComponent,HighlightDirective,UnlessDiretive],
   bootstrap: [ Tab3Page ]
 })
 export class Tab3PageModule {

@@ -27,4 +27,27 @@
 <!-- 可传多个属性 -->
 <p [appHighlight]='color' defaultColor="violet">Highlight me!</p>
 <p [appHighlight]='color'>Highlighted noDefaultColor</p>
+
+<h1>结构型指令</h1>
+<!-- 结构型指令可以操纵HTML的元素布局
+     当没有合适的宿主元素时，可以使用<ng-container>对元素进行分组
+     Angular会把星号*语法解开成<ng-template>
+-->
+<p>
+    The condition is currently
+    <span [ngClass]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.
+    <button
+      (click)="condition = !condition"
+      [ngClass] = "{ 'a': condition, 'b': !condition }" >
+      Toggle condition to {{condition ? 'false' : 'true'}}
+    </button>
+  </p>
+<p *appUnless="condition">
+  (A) This paragraph is displayed because the condition is false
+</p>
+<p *appUnless="!condition">
+    (B) This paragraph is displayed because the condition is true
+</p>
+  
+
 </ion-content>

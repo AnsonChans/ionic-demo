@@ -9,6 +9,7 @@ import { AdService } from './ad.service';
 })
 export class Tab3Page implements OnInit {
   color :string;
+  condition =false;
   ads:AdItem[];
   constructor(private adService:AdService){}
 

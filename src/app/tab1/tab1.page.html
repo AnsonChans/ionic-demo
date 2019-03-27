@@ -68,5 +68,17 @@
 <input #box (keyup)='0'>
 <p>{{box.value}}</p>
 
-
+<h1>管道操作符</h1>
+<!-- 
+  DatePipe 根据区域设置规则格式化日期值
+  CurrencyPipe 把数字转换为金额字符串
+  PercentPipe 把数字转换为百分比字符串
+ -->
+<p>
+  My birthday is {{birthday|date:"yyyy/MM/dd"}}
+</p>
+<h4>自定义管道</h4>
+<div>Normal power：<input [(ngModel)]="power"></div>
+<div>Boost factor：<input [(ngModel)]="factor"></div>
+<p>Super Power:{{power|exponentialStrength:factor}}</p>
 </ion-content>
