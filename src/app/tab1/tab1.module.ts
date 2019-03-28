@@ -1,3 +1,5 @@
+import { FlyingHeroesImpurePipe, FlyingHeroesPipe } from './flying-heroes.pipe';
+import { FlyingHeroesComponent,FlyingHeroesImpureComponent } from './flying-heroes.component';
 import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 
 import { IonicModule } from '@ionic/angular';
@@ -14,6 +16,6 @@ import { Tab1Page } from './tab1.page';
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab1Page }])
   ],
-  declarations: [Tab1Page,ExponentialStrengthPipe]
+  declarations: [Tab1Page,FlyingHeroesImpureComponent,FlyingHeroesImpurePipe, FlyingHeroesPipe ,ExponentialStrengthPipe,FlyingHeroesComponent]
 })
 export class Tab1PageModule {}

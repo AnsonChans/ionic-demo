@@ -81,4 +81,19 @@
 <div>Normal power：<input [(ngModel)]="power"></div>
 <div>Boost factor：<input [(ngModel)]="factor"></div>
 <p>Super Power:{{power|exponentialStrength:factor}}</p>
+
+<!-- 
+  纯管道
+  Angular 只有在它检测到输入值发生了纯变更时才会执行纯管道。 纯变更是指对原始类型值(String、Number、Boolean、Symbol)的更改， 
+  或者对对象引用(Date、Array、Function、Object)的更改。
+  非纯管道
+  Angular 会在每个组件的变更检测周期中执行非纯管道。 非纯管道可能会被调用很多次，和每个按键或每次鼠标移动一样频繁。
+  要在脑子里绷着这根弦，必须小心翼翼的实现非纯管道。 一个昂贵、迟钝的管道将摧毁用户体验
+ -->
+
+<h4>纯管道</h4>
+<app-flying-heroes></app-flying-heroes>
+
+<h4>非纯管道</h4>
+<app-flying-heroes-impure></app-flying-heroes-impure>
 </ion-content>
