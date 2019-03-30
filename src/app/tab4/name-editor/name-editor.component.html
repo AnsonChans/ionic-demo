@@ -1,0 +1,12 @@
+<label>
+    <!-- 可以用 FormControl 的构造函数设置初始值 -->
+    Name:
+    <input type="text" [formControl]='name'>
+</label>
+<!--  1、通过可观察对象 valueChanges，你可以在模板中使用 AsyncPipe 或在组件类中使用 subscribe() 方法来监听表单值的变化。
+      2、使用 value 属性。它能让你获得当前值的一份快照。 -->
+<p>
+    Value:{{name.value}}
+</p>
+<!-- name.setValue改变值 -->
+<p><button (click)="updateName()">Update Name</button></p>
