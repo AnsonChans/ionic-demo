@@ -8,7 +8,7 @@
     <input type="text" required formControlName='lastName'>
   </label>
   <div formGroupName="address">
-    <h3>Address</h3>
+    <h4>Address</h4>
     <label>
       Street:
       <input type="text" formControlName="street">
@@ -27,7 +27,7 @@
     </label>
   </div>
   <div formArrayName="aliases">
-    <h3>Aliases</h3>
+    <h4>Aliases</h4>
     <button (click)="addAlias()">Add Alias</button>
     <div *ngFor="let address of aliases.controls;let i = index">
       <label>
