@@ -1,3 +1,8 @@
+import { HeroFormReactiveComponent } from './hero-form-reactive/hero-form-reactive.component';
+import { HeroFormTemplateComponent } from './hero-form-template/hero-form-template.component';
+import { UniqueAlterEgoValidatorDirective } from './shared/alter-ego.directive';
+import { IdentityRevealedValidatorDirective } from './shared/identity-revealed.directive';
+import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
 import { HeroFormComponent } from './hero-form/hero-form.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
@@ -18,6 +23,6 @@ import { Tab4Page } from './tab4.page';
     ReactiveFormsModule,
     RouterModule.forChild([{ path: '', component: Tab4Page }])
   ],
-  declarations: [Tab4Page,NameEditorComponent,ProfileEditorComponent,HeroFormComponent]
+  declarations: [Tab4Page,HeroFormReactiveComponent,HeroFormTemplateComponent,UniqueAlterEgoValidatorDirective,IdentityRevealedValidatorDirective,ForbiddenValidatorDirective,NameEditorComponent,ProfileEditorComponent,HeroFormComponent]
 })
 export class Tab4PageModule { }

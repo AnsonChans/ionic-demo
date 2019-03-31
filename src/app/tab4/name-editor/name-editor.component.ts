@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-name-editor',
@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./name-editor.component.scss'],
 })
 export class NameEditorComponent {
-  name = new FormControl('AnsonChan')
+  name = new FormControl('AnsonChan',Validators.required)
   
   updateName(){
     this.name.setValue('Boyhans')
