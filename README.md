@@ -25,7 +25,7 @@
    - 与promise比较
 - NgModule
    - ~~简介~~
-   - JS模块 vs NgModule
+   - ~~JS模块 vs NgModule~~
    - 常用模块
    - 特性模块分类
    - 入口组件
